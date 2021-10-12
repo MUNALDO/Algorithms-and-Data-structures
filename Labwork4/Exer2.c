@@ -13,7 +13,8 @@ int main()
 {
     int number=0;
     int result;
-    printf("Enter number : %d\n",number); scanf("%d",&number);
+    printf("Enter number : "); 
+    scanf("%d",&number);
     result = SumOfDigits(number);
     printf("Result = %d\n",SumOfDigits(number));
     return 0;

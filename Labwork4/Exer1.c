@@ -1,19 +1,18 @@
 #include <stdio.h>
 
-void SumOfDigits(int number)
-{
-    int s=0;
-    while (number>0)
-    {
-        s += (number%10);
-        number = number/10;
-    }
-    printf("Sum of digits : %d",s);
-}
-
 int main()
 {
-    int number;
-    printf("Enter number : "); scanf("%d",number);
-    SumOfDigits(number);
+    int sum=0;
+    int digit=0;
+    int n;
+    printf("Enter the number of digits : "); scanf("%d",&digit);
+    printf("Enter number : "); scanf("%d",&n);
+    for(int i=0; i<=digit; i++)
+    {
+        int s = n%10;
+        n /= 10;
+        sum += s;
+    }
+    printf("Sum of digits : %d\n", sum);
+    return 0;
 }
